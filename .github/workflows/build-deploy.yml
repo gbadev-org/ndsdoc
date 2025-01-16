@@ -17,13 +17,13 @@ concurrency:
 
 jobs:
   build:
-    name: Build Tonc
+    name: Build ndsdoc
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout tonc (and submodules)
+    - name: Checkout ndsdoc (and submodules)
       uses: actions/checkout@v2
       with:
-        path: tonc
+        path: ndsdoc
         submodules: 'true'
 
     - name: Install mdbook
@@ -37,13 +37,13 @@ jobs:
     - name: Cache build dir
       uses: actions/cache@v2
       with:
-        path: tonc/target/
-        key: ${{ runner.os }}-build-${{ hashFiles('tonc/Cargo.lock') }}
+        path: ndsdoc/target/
+        key: ${{ runner.os }}-build-${{ hashFiles('ndsdoc/Cargo.lock') }}
         restore-keys: |
           ${{ runner.os }}-build-
 
     - name: Build
-      working-directory: tonc/
+      working-directory: ndsdoc/
       env:
         MDBOOK_BUILD__CREATE_MISSING: "false" # Prevent creating missing files in SUMMARY.md
       run: |
@@ -51,13 +51,13 @@ jobs:
   
     - name: Generate sitemap
       run: |
-        cd tonc/output
+        cd ndsdoc/output
         npx sscli --no-clean --base https://ndsdoc.gbadev.net/
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
-        path: tonc/output
+        path: ndsdoc/output
 
   deploy:
     name: Deploy to GitHub pages
