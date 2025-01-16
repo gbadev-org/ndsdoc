@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ page.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME }} - {{ page.title|striptags }}{%endblock%}
+
+{% block head %}
+  {{ super() }}
+
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(page) %}
+    {{ translations.entry_hreflang(page) }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+    
+    {% set (prev_num, prev_slug, prev_name) = PREV(page) %}
+    {% set (next_num, next_slug, next_name) = NEXT(page) %}
+    
+    <table class="header">
+      <tr>
+        <td class="hdr_l">
+          {% if prev_num != None %}
+          <a href="{{ prev_slug }}.html">{{ prev_name }}</a>
+          {% endif %}
+        </td>
+        <td class="hdr_c"><a href="toc.html">Contents</a></td>
+        <td class="hdr_r">
+          {% if next_num != None %}
+          <a href="{{ next_slug }}.html">{{ next_name }}</a>
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+    
+    <hr>
+    
+    <!-- <h1>{{ page.title }}</h1> -->
+    
+    {{ page.content }}
+
+    <br>
+    
+    <div class="endtag">
+      By <a href="mailto:cearn@coranac.com">J Vijn</a> + <a href="https://gbadev.net">gbadev.net</a> community.
+      Modified: {{ page.modified.strftime("%Y-%m-%d") }}.
+      Get Tonc example code <a href="https://github.com/gbadev-org/libtonc-examples" target="_blank">here</a>.
+    </div>
+    
+    <hr>
+    
+    <table class="footer">
+      <tr>
+        <td class="hdr_l">
+          {% if prev_num != None %}
+          <a href="{{ prev_slug }}.html">Prev</a>
+          {% endif %}
+        </td>
+        <td class="hdr_c"><a href="toc.html">Contents</a></td>
+        <td class="hdr_r">
+          {% if next_num != None %}
+          <a href="{{ next_slug }}.html">Next</a>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td class="hdr_l">
+          {% if prev_num != None %}
+          {{ prev_name }}
+          {% endif %}
+        </td>
+        <td class="hdr_c"></td>
+        <td class="hdr_r">
+          {% if next_num != None %}
+          {{ next_name }}
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+    
+{% endblock %}

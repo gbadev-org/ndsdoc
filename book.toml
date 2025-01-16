@@ -1,0 +1,35 @@
+[book]
+title = "ndsdoc"
+description = "ndsdoc"
+src = "content"
+language = "en"
+
+[build]
+build-dir = "output"
+create-missing = false
+
+[preprocessor.pandocs]
+command = "cargo run -p pandocs-preproc --locked --release --"
+
+[output.html]
+git-repository-url = "https://github.com/gbadev-org/ndsdoc"
+edit-url-template = "https://github.com/gbadev-org/ndsdoc/edit/master/{path}"
+site-url = "/"
+additional-css = [
+    "theme/css/tonc.css",
+#    "theme/css/tonc_dark.css"
+]
+
+[preprocessor.toc]
+command = "cargo run -p mdbook-toc --locked --release --"
+# Doesn't seem to work because of how markdown parses this as an unresolved shorthand link.
+# Default marker is <!-- toc -->
+# marker = "[TOC]"
+renderer = ["html"]
+max-level = 2
+
+[preprocessor.external-links]
+command = "cargo run -p mdbook-external-links --locked --release --"
+
+[preprocessor.xnos]
+command = "python3 -X utf8 ./mdbook-xnos/mdbook-xnos.py"
