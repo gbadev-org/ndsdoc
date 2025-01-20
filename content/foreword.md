@@ -10,7 +10,7 @@ Some text
 
 ## Contributing
 
-This book is open source, released under the [LICENSE](https://raw.githubusercontent.com/gbadev-org/ndsdoc/master/LICENSE) license. Everyone is welcome to help, provide feedback and propose additions or improvements. The git repository is hosted at [github.com/gbadev-org/ndsdoc](https://github.com/gbadev-org/ndsdoc), where you can learn more about how you can help, find detailed contribution guidelines and procedures, file Issues and send Pull Requests.
+This book is open source, released under the [CC0](https://raw.githubusercontent.com/gbadev-org/ndsdoc/master/LICENSE-CC0.txt) license. Everyone is welcome to help, provide feedback and propose additions or improvements. The git repository is hosted at [github.com/gbadev-org/ndsdoc](https://github.com/gbadev-org/ndsdoc), where you can learn more about how you can help, find detailed contribution guidelines and procedures, file Issues and send Pull Requests.
 
 
 ## Using this document
