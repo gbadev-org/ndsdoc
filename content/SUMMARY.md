@@ -12,6 +12,7 @@
     * [DS Peripherals](ds_peripherals.md)
     * [DS WiFi (Mitsumi)](ds_wifi.md)
         * [DS WiFi I/O Map](ds_wifi_io_map.md)
+        * [DS WiFi General Registers](ds_wifi_general_regs.md)
 * [DSi Introduction](dsi_introduction.md)
     * [DSi I/O Map](dsi_io_map.md)
     * [DSi Control Registers](dsi_control_regs.md)
