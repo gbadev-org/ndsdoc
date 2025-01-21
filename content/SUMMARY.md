@@ -11,6 +11,7 @@
     * [DS Sound](ds_sound.md)
     * [DS Peripherals](ds_peripherals.md)
     * [DS WiFi (Mitsumi)](ds_wifi.md)
+        * [DS WiFi I/O Map](ds_wifi_io_map.md)
 * [DSi Introduction](dsi_introduction.md)
     * [DSi I/O Map](dsi_io_map.md)
     * [DSi Control Registers](dsi_control_regs.md)
