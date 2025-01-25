@@ -21,16 +21,6 @@ This chapter talks about the registers used to control the 3D display.
 | 14     | Rear plane mode (0=Use clear color, 1=Bitmap)
 | 15-31  | Unused
 
-<a id="VIEWPORT"></a>
-## VIEWPORT: Set 3D viewport (0x4000580, W)
-
-| Bit(s) | Description                                             |
-|--------|---------------------------------------------------------|
-| 0-7    | X1: Left-most X coordinate (0...255)
-| 8-15   | Y1: Bottom-most Y coordinate (0...191)
-| 16-23  | X2: Right-most X coordinate (0...255)
-| 24-31  | Y2: Top-most Y coordinate (0...191)
-
 To fill the screen: X1=0, Y1=0, X2=255, Y2=191
 
 Note that coordinate (0, 0) is the bottom-left corner of the screen, while ht is
