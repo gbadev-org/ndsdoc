@@ -8,7 +8,7 @@
     * [DS 2D Graphics](ds_2d_graphics.md)
     * [DS 3D Graphics](ds_3d_graphics.md)
         * [3D Display Control](3d_disp_cnt.md)
-        * [3D Status Register](3d_status_registers.md)
+        * [3D Status Registers](3d_status_registers.md)
         * [3D Geometry Engine](3d_geometry_engine.md)
             * [Vital Commands](3d_vital_commands.md)
             * [Vertex Commands](3d_vertex_polygon_commands.md)
