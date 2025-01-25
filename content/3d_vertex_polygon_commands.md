@@ -91,7 +91,7 @@ Parameter definition:
 
 <a id="3D_CMD_21"></a>
 ## Set Normal Vector: Port 0x04000484, Index 0x21, 1 Parameter
-Sets the normal vector used for the next vertex. 
+Sets the "normal vector" used for the next vertex. In reality this will use the currently set light parameters to calculate a new vertex color.
 
 Parameter definition:
 

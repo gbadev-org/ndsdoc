@@ -66,14 +66,14 @@ When packing multiple commands you may not leave zeroed indicies (indicating no 
 | 0x2B          | 0x0400_04AC  | <a href=3d_vertex_polygon_commands.html#3D_CMD_2B>Set Texture Palette</a>
 | 0x30          | 0x0400_04C0  | <a href=3d_vertex_polygon_commands.html#3D_CMD_30>Set Diffused/Ambient Color</a>
 | 0x31          | 0x0400_04C4  | <a href=3d_vertex_polygon_commands.html#3D_CMD_31>Set Specular/Emissive Color</a>
-| 0x32          | 0x0400_04C8  | Set Light Direction 
-| 0x33          | 0x0400_04CC  | Set Light Color
-| 0x34          | 0x0400_04D0  | Set Shininess table
+| 0x32          | 0x0400_04C8  | <a href=3d_test_commands.html#3D_CMD_32>Set Light Direction</a>
+| 0x33          | 0x0400_04CC  | <a href=3d_test_commands.html#3D_CMD_33>Set Light Color</a>
+| 0x34          | 0x0400_04D0  | <a href=3d_test_commands.html#3D_CMD_34>Set Shininess table</a>
 | 0x40          | 0x0400_0500  | <a href=3d_vertex_polygon_commands.html#3D_CMD_40>Start vertex list</a>
 | 0x41          | 0x0400_0504  | <a href=3d_vertex_polygon_commands.html#3D_CMD_41>End vertex list</a>
 | 0x50          | 0x0400_0540  | <a href=3d_vital_commands.html#3D_CMD_50>Swap Buffers between geometry and rendering engine</a>
 | 0x60          | 0x0400_0580  | <a href=3d_vital_commands.html#3D_CMD_60>Set 3D Viewport</a>
-| 0x70          | 0x0400_05C0  | Test view volume against cuboid
-| 0x71          | 0x0400_05C4  | Set Position Vector for test
-| 0x72          | 0x0400_05C8  | Set Direction Vector for test
+| 0x70          | 0x0400_05C0  | <a href=3d_test_commands.html#3D_CMD_70>Test view volume against cuboid</a>
+| 0x71          | 0x0400_05C4  | <a href=3d_test_commands.html#3D_CMD_71>Test Position Vector</a>
+| 0x72          | 0x0400_05C8  | <a href=3d_test_commands.html#3D_CMD_72>Test Direction Vector</a>
 
