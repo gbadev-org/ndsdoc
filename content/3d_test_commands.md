@@ -1,7 +1,11 @@
+# 3D Test Commands
+
+These Commands test various parameters against desired results by the user. Each command requires that the "test busy" bit of the ``GXSTAT`` register is cleared before reading the result.
+
 <a id="3D_CMD_70"></a>
 ## Test if Cuboid Intersects View Volume: Port 0x040005C0, Index 0x70, 3 Parameters
 
-The result of this command can be read from bit 1 of the ``GXSTAT`` register after it's ready bit has been cleared and indicates if any part of the specified cuboid intesects the view volume. A value of 1 indicates that the cuboid would have been visible if drawn.
+The result of this command can be read from bit 1 of the ``GXSTAT`` register and indicates if any part of the specified cuboid intesects the view volume. A value of 1 indicates that the cuboid would have been visible if drawn.
 
 Parameter definition:
 
